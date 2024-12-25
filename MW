@@ -1,0 +1,1849 @@
+function generateHTML(_0x376ea8, _0xcaa53a, _0x155f8b) {
+    const _0x532797 = _0x155f8b !== undefined ? "\n        <div id=\"countdown-box\">\n            <h2>Time Left</h2>\n            <p>" + _0x155f8b + " days remaining</p>\n        </div>\n    " : '';
+    const _0x4cc1e0 = _0xcaa53a === "type1" ? "\n        <style>\n            body {\n                font-family: 'Verdana', sans-serif;\n                text-align: center;\n                margin: 0;\n                padding: 0;\n                overflow: hidden;\n                background: #000;\n                color: #fff;\n            }\n            #container {\n                position: relative;\n                height: 100vh;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                flex-direction: column;\n                z-index: 1;\n            }\n            #error-box {\n                position: relative;\n                width: 300px;\n                padding: 20px;\n                background: rgba(255, 255, 255, 0.9);\n                border-radius: 12px;\n                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);\n                text-align: center;\n                z-index: 2;\n            }\n            #error-box ._404 {\n                font-size: 100px;\n                font-weight: bold;\n                color: #e94e77;\n                margin: 0;\n                animation: shake 0.5s ease-in-out;\n            }\n            #error-box .message {\n                font-size: 22px;\n                color: #555;\n                margin: 20px 0;\n                font-weight: 400;\n            }\n            #error-box .contact {\n                font-size: 18px;\n                color: #777;\n            }\n            #countdown-box {\n                margin-top: 20px;\n                padding: 10px;\n                background: #333;\n                color: #fff;\n                border-radius: 8px;\n            }\n            @keyframes shake {\n                0% { transform: translateX(0); }\n                25% { transform: translateX(-10px); }\n                50% { transform: translateX(0); }\n                75% { transform: translateX(10px); }\n                100% { transform: translateX(0); }\n            }\n            @keyframes gradientAnimation {\n                0% { background-position: 0% 0%; }\n                50% { background-position: 100% 100%; }\n                100% { background-position: 0% 0%; }\n            }\n            #background {\n                position: absolute;\n                top: 0;\n                left: 0;\n                width: 100%;\n                height: 100%;\n                overflow: hidden;\n                z-index: 0;\n                background: linear-gradient(-45deg, #ff6f61, #de64a5, #76c7c0, #6a7f5d);\n                background-size: 400% 400%;\n                animation: gradientAnimation 15s ease infinite;\n            }\n            .cube {\n                position: absolute;\n                top: 50%;\n                left: 50%;\n                width: 200px;\n                height: 200px;\n                transform-style: preserve-3d;\n                animation: rotate 20s infinite linear;\n                transform: translateZ(-100px);\n            }\n            .cube div {\n                position: absolute;\n                width: 200px;\n                height: 200px;\n                background: rgba(255, 255, 255, 0.2);\n                border: 1px solid rgba(255, 255, 255, 0.5);\n            }\n            .cube .front  { transform: rotateY(  0deg) translateZ(100px); }\n            .cube .back   { transform: rotateY(180deg) translateZ(100px); }\n            .cube .top    { transform: rotateX( 90deg) translateZ(100px); }\n            .cube .bottom { transform: rotateX(-90deg) translateZ(100px); }\n            .cube .left   { transform: rotateY(-90deg) translateZ(100px); }\n            .cube .right  { transform: rotateY( 90deg) translateZ(100px); }\n            @keyframes rotate {\n                from { transform: rotateX(0) rotateY(0); }\n                to { transform: rotateX(360deg) rotateY(360deg); }\n            }\n            .floating-shape {\n                position: absolute;\n                border-radius: 50%;\n                background: rgba(255, 255, 255, 0.5);\n                animation: float 5s infinite ease-in-out;\n            }\n            .shape1 { width: 100px; height: 100px; top: 10%; left: 20%; animation-delay: 0s; }\n            .shape2 { width: 80px; height: 80px; top: 30%; left: 50%; animation-delay: 2s; }\n            .shape3 { width: 120px; height: 120px; top: 60%; left: 80%; animation-delay: 4s; }\n            .shape4 { width: 60px; height: 60px; top: 80%; left: 10%; animation-delay: 1s; }\n            .shape5 { width: 90px; height: 90px; top: 40%; left: 70%; animation-delay: 3s; }\n        </style>\n        <div id=\"background\">\n            <div class=\"cube\">\n                <div class=\"front\"></div>\n                <div class=\"back\"></div>\n                <div class=\"top\"></div>\n                <div class=\"bottom\"></div>\n                <div class=\"left\"></div>\n                <div class=\"right\"></div>\n            </div>\n            <div class=\"floating-shape shape1\"></div>\n            <div class=\"floating-shape shape2\"></div>\n            <div class=\"floating-shape shape3\"></div>\n            <div class=\"floating-shape shape4\"></div>\n            <div class=\"floating-shape shape5\"></div>\n        </div>\n        <div id=\"container\">\n            <div id=\"error-box\">\n                <div class=\"_404\">404</div>\n                <div class=\"message\">Oops! Your loop has expired.</div>\n                <div class=\"message\">Contact felkona support directly and use the felkona looper again.</div>\n                <div class=\"contact\">For assistance, please contact support: " + _0x376ea8 + "</div>\n                " + _0x532797 + "\n            </div>\n        </div>\n    " : "\n        <style>\n            body {\n                font-family: 'Arial', sans-serif;\n                text-align: center;\n                background: linear-gradient(to bottom right, #00b4db, #0083b0);\n                color: #fff;\n                margin: 0;\n                padding: 0;\n                overflow: hidden;\n            }\n            #container {\n                position: relative;\n                height: 100vh;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                perspective: 1000px;\n                z-index: 2;\n            }\n            #error-box {\n                position: relative;\n                width: 350px;\n                height: 250px;\n                background: #fff;\n                border-radius: 15px;\n                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);\n                transform-style: preserve-3d;\n                transform: rotateX(20deg) rotateY(20deg);\n                animation: rotate 20s infinite linear;\n                z-index: 1;\n            }\n            #error-box::before {\n                content: \"\";\n                position: absolute;\n                top: 0;\n                left: 0;\n                width: 100%;\n                height: 100%;\n                background: radial-gradient(circle, rgba(255, 87, 34, 0.5), rgba(255, 193, 7, 0.5));\n                border-radius: 15px;\n                transform: rotateX(90deg);\n                transform-origin: bottom;\n                z-index: -1;\n            }\n            #error-box .content {\n                position: absolute;\n                top: 50%;\n                left: 50%;\n                transform: translate(-50%, -50%);\n                text-align: center;\n                color: #333;\n            }\n            #error-box ._404 {\n                font-size: 140px;\n                font-weight: bold;\n                margin: 0;\n                color: #ff5722;\n                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);\n                animation: pulse 2s infinite;\n            }\n            #error-box hr {\n                width: 50%;\n                border: 0;\n                border-top: 3px solid #ff5722;\n                margin: 20px auto;\n            }\n            #error-box ._1 {\n                font-size: 28px;\n                font-weight: bold;\n                margin: 20px 0;\n            }\n            #error-box ._2 {\n                font-size: 20px;\n                color: #ffeb3b;\n            }\n            #countdown-box {\n                margin-top: 20px;\n                padding: 10px;\n                background: #333;\n                color: #fff;\n                border-radius: 8px;\n            }\n            @keyframes rotate {\n                from { transform: rotateX(20deg) rotateY(20deg); }\n                to { transform: rotateX(380deg) rotateY(380deg); }\n            }\n            @keyframes pulse {\n                0%, 100% {\n                    transform: scale(1);\n                }\n                50% {\n                    transform: scale(1.1);\n                }\n            }\n        </style>\n        <div id=\"container\">\n            <div id=\"error-box\">\n                <div class=\"content\">\n                    <div class='_404'>404</div>\n                    <hr>\n                    <div class='_1'>You are wrong user..</div>\n                    <div class='_1'>Oops! Page Not Found.</div>\n                    <div class='_2'>We can't find the page you're looking for. Contact support: " + _0x376ea8 + "</div>\n                    " + _0x532797 + "\n                </div>\n            </div>\n        </div>\n    ";
+    return _0x4cc1e0;
+  }
+  const handleError = () => {
+    const _0x85f4c3 = document.querySelector('span');
+    const _0x1134a1 = _0x85f4c3 ? _0x85f4c3.textContent.trim() : '';
+    if (_0x1134a1 === "[08863791]") {} else {
+      console.log("404 error");
+      const _0x145ab8 = document.getElementsByTagName("strong")[0x3]?.["innerText"];
+      if (_0x145ab8 === "Abdul MaleS_ ") {
+        full();
+      } else {
+        switch (window.location.href) {
+          case "https://www.microworkers.com/jobs.php":
+          case "https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09":
+          case "https://ttv.microworkers.com/dotask/info/":
+          case "https://www.microworkers.com/hm_worker.php":
+          case "https://www.microworkers.com/withdraw.php":
+            document.body.innerHTML = generateHTML("felkonalooper.sapport@gmail.com");
+            break;
+        }
+      }
+    }
+  };
+  function getRemainingDays(_0x3a105f) {
+    const _0x5ad51d = new Date().getTime();
+    const _0x95b739 = _0x3a105f - _0x5ad51d;
+    const _0xc20685 = Math.ceil(_0x95b739 / 86400000);
+    return _0xc20685;
+  }
+  function displayRemainingDays(_0x4d80de) {
+    const _0x4f2d54 = getRemainingDays(_0x4d80de);
+    const _0x5532ee = document.createElement("div");
+    _0x5532ee.style.backgroundColor = "transparent";
+    _0x5532ee.style.border = '';
+    _0x5532ee.style.borderRadius = '5px';
+    _0x5532ee.style.padding = '10px';
+    _0x5532ee.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+    _0x5532ee.style.fontSize = "15px";
+    _0x5532ee.style.fontFamily = "Arial, sans-serif";
+    _0x5532ee.style.color = "Yellow";
+    _0x5532ee.style.margin = '9.5px';
+    _0x5532ee.style.position = 'relative';
+    _0x5532ee.innerHTML = "\n        <strong>Account expires in:</strong> <span style=\"font-size:20px; font-weight: bold; color: red;\">" + _0x4f2d54 + "</span> day" + (_0x4f2d54 !== 0x1 ? 's' : '') + "\n    ";
+    const _0x474c0e = document.querySelector('.outer');
+    if (_0x474c0e) {
+      _0x474c0e.insertBefore(_0x5532ee, _0x474c0e.firstChild);
+    }
+  }
+  chrome.storage.local.get(["startDate", "endDate"], _0x222406 => {
+    const _0x5cb372 = new Date().getTime();
+    const _0x5264ee = _0x222406.startDate ? new Date(_0x222406.startDate).getTime() : new Date("2024-08-31").getTime();
+    const _0x8ac34f = _0x222406.endDate ? new Date(_0x222406.endDate).getTime() : new Date("2025-01-31").getTime();
+    let _0x4d299c;
+    if (_0x5cb372 < _0x5264ee) {
+      _0x4d299c = Math.ceil((_0x5264ee - _0x5cb372) / 86400000);
+    } else if (_0x5cb372 > _0x8ac34f) {
+      _0x4d299c = 0x0;
+    } else {
+      _0x4d299c = Math.ceil((_0x8ac34f - _0x5cb372) / 86400000);
+    }
+    if (_0x5cb372 < _0x5264ee || _0x5cb372 > _0x8ac34f) {
+      document.body.innerHTML = generateHTML("felkonalooper.sapport@gmail.com", "type1", _0x4d299c);
+    } else {
+      displayRemainingDays(_0x8ac34f);
+      handleError();
+    }
+  });
+  function full() {
+    ttv1();
+    ttv2();
+    ttv3();
+    ttv4();
+    ttv5();
+    ttv6();
+    ttv7();
+    ttv8();
+    ttvmanuyal();
+    ttv9();
+    ttv10();
+    doTaskAgain();
+  }
+  if (window.location.href === 'https://www.microworkers.com/login.php') {
+    const emailInput = document.querySelector("#Email");
+    const loginButton = document.querySelector("input[name='Button']");
+    if (emailInput && loginButton) {
+      const originalClickHandler = loginButton.onclick;
+      loginButton.addEventListener("click", _0x191bd5 => {
+        if (emailInput.value !== "reloadloopa@gmail.com") {
+          _0x191bd5.preventDefault();
+          return false;
+        }
+        if (originalClickHandler) {
+          originalClickHandler.call(loginButton, _0x191bd5);
+        }
+      });
+    } else {
+      console.error("Required elements not found on the page!");
+    }
+  } else {
+    console.error("This script is only meant to run on https://www.microworkers.com/login.php");
+  }
+  function action() {
+    (function () {
+      'use strict';
+  
+      function _0x497abc(_0x28ca3b) {
+        const _0x1b0c44 = /\/dotask\/info\/([^\/]+)/;
+        const _0x167a29 = _0x28ca3b.match(_0x1b0c44);
+        return _0x167a29 ? _0x167a29[0x1] : null;
+      }
+      function _0x4bbdf0() {
+        try {
+          const _0xd35abf = window.location.href;
+          if (_0xd35abf.startsWith("https://ttv.microworkers.com/dotask/info/")) {
+            var _0x20efd9 = document.createElement("form");
+            _0x20efd9.action = "/dotask/allocateposition";
+            _0x20efd9.method = "POST";
+            var _0x45f3b1 = _0x497abc(_0xd35abf);
+            var _0x18f722 = document.createElement("input");
+            _0x18f722.type = "hidden";
+            _0x18f722.name = "CampaignId";
+            _0x18f722.value = _0x45f3b1;
+            var _0x1e5ba9 = document.createElement("button");
+            _0x1e5ba9.type = "submit";
+            _0x1e5ba9.className = "btn btn-primary accept-start-button";
+            _0x1e5ba9.innerHTML = "<i class=\"glyphicon glyphicon-play\"></i> Accept and Start";
+            _0x1e5ba9.onclick = function () {
+              this.disabled = true;
+              this.form.submit();
+            };
+            _0x20efd9.appendChild(_0x18f722);
+            _0x1e5ba9.style.display = "non";
+            _0x20efd9.appendChild(_0x1e5ba9);
+            document.body.appendChild(_0x20efd9);
+            var _0x5bce3f = document.createElement("style");
+            _0x5bce3f.innerHTML = "\n                        .accept-start-button {\n                            background-color: Green;\n                            color: white;\n                            padding: 5px;\n                            border: none;\n                            border-radius: 5px;\n                            cursor: pointer;\n                            position: fixed;\n                            bottom: 200px;\n                            right: 20px;\n                        }\n                        .accept-start-button:hover {\n                            background-color: black;\n                        }\n                    ";
+            document.head.appendChild(_0x5bce3f);
+          }
+        } catch (_0x5a7ec5) {
+          console.error("Error adding accept-start button:", _0x5a7ec5.message);
+        }
+      }
+      _0x4bbdf0();
+    })();
+  }
+  function ttv1() {
+    (function () {
+      'use strict';
+  
+      function _0x233ef0() {
+        const _0x100308 = /https:\/\/ttv\.microworkers\.com\/dotask\/info\/.*/;
+        return _0x100308.test(window.location.href);
+      }
+      if (!_0x233ef0()) {
+        return;
+      }
+      const _0x598e6e = document.createElement("div");
+      _0x598e6e.style.position = "fixed";
+      _0x598e6e.style.bottom = "35%";
+      _0x598e6e.style.left = '8%';
+      _0x598e6e.style.zIndex = "1000";
+      _0x598e6e.style.display = "flex";
+      _0x598e6e.style.alignItems = "center";
+      const _0x37f68d = document.createElement('label');
+      _0x37f68d.innerText = "Next";
+      _0x37f68d.style.color = "white";
+      _0x37f68d.style.marginRight = "10px";
+      _0x37f68d.style.fontSize = "16px";
+      const _0x421db3 = document.createElement("input");
+      _0x421db3.type = "checkbox";
+      _0x421db3.style.display = "none";
+      const _0x4852e9 = document.createElement("span");
+      _0x4852e9.style.position = "relative";
+      _0x4852e9.style.display = "inline-block";
+      _0x4852e9.style.width = "60px";
+      _0x4852e9.style.height = "34px";
+      _0x4852e9.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+      _0x4852e9.style.borderRadius = "34px";
+      _0x4852e9.style.cursor = "pointer";
+      const _0x2dff18 = document.createElement("span");
+      _0x2dff18.style.position = "absolute";
+      _0x2dff18.style.top = "2px";
+      _0x2dff18.style.left = "2px";
+      _0x2dff18.style.width = "30px";
+      _0x2dff18.style.height = "30px";
+      _0x2dff18.style.backgroundColor = '#42bd47';
+      _0x2dff18.style.borderRadius = "50%";
+      _0x2dff18.style.transition = "left 0.2s";
+      let _0x2e39cd = localStorage.getItem('scriptState_Next_2') === "true";
+      _0x421db3.checked = _0x2e39cd;
+      if (_0x2e39cd) {
+        _0x4852e9.style.backgroundColor = '#0df916';
+        _0x2dff18.style.left = "28px";
+      }
+      _0x4852e9.addEventListener('click', function () {
+        if (_0x421db3.checked) {
+          _0x421db3.checked = false;
+          localStorage.setItem('scriptState_Next_2', 'false');
+          _0x4852e9.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+          _0x2dff18.style.left = "2px";
+        } else {
+          _0x421db3.checked = true;
+          localStorage.setItem("scriptState_Next_2", 'true');
+          _0x4852e9.style.backgroundColor = "#0df916";
+          _0x2dff18.style.left = "28px";
+        }
+      });
+      _0x4852e9.appendChild(_0x2dff18);
+      _0x598e6e.appendChild(_0x37f68d);
+      _0x598e6e.appendChild(_0x4852e9);
+      document.body.appendChild(_0x598e6e);
+      function _0x3173f0() {
+        const _0xa84eb4 = document.getElementsByTagName('h3');
+        for (let _0x5f03f0 = 0x0; _0x5f03f0 < _0xa84eb4.length; _0x5f03f0++) {
+          if (_0xa84eb4[_0x5f03f0].textContent.trim() === "TTVCampaign-E0028:All positions taken already") {
+            let _0x1504fa = localStorage.getItem("refreshCount");
+            if (!_0x1504fa) {
+              _0x1504fa = 0x0;
+            }
+            _0x1504fa++;
+            localStorage.setItem('refreshCount', _0x1504fa);
+            if (_0x1504fa >= 0x2) {
+              const _0x40ad2c = document.querySelectorAll('a');
+              for (let _0x8a08fa = 0x0; _0x8a08fa < _0x40ad2c.length; _0x8a08fa++) {
+                if (_0x40ad2c[_0x8a08fa].textContent.trim() === "Jobs") {
+                  _0x40ad2c[_0x8a08fa].addEventListener('click', function () {
+                    localStorage.setItem("refreshCount", 0x0);
+                  });
+                  _0x40ad2c[_0x8a08fa].click();
+                  break;
+                }
+              }
+            }
+            break;
+          }
+        }
+      }
+      if (_0x2e39cd) {
+        _0x3173f0();
+      }
+    })();
+    (function () {
+      'use strict';
+  
+      function _0x369249() {
+        const _0x197830 = /https:\/\/ttv\.microworkers\.com\/dotask\/info\/.*/;
+        return _0x197830.test(window.location.href);
+      }
+      if (!_0x369249()) {
+        return;
+      }
+      const _0x3dac2e = document.createElement("div");
+      _0x3dac2e.style.position = 'fixed';
+      _0x3dac2e.style.bottom = '35%';
+      _0x3dac2e.style.left = "17%";
+      _0x3dac2e.style.zIndex = "1000";
+      _0x3dac2e.style.display = "flex";
+      _0x3dac2e.style.alignItems = "center";
+      const _0x3b4b9d = document.createElement("label");
+      _0x3b4b9d.innerText = 'Slowly';
+      _0x3b4b9d.style.color = "white";
+      _0x3b4b9d.style.marginRight = "10px";
+      _0x3b4b9d.style.fontSize = "16px";
+      const _0x11945f = document.createElement("input");
+      _0x11945f.type = 'checkbox';
+      _0x11945f.style.display = "none";
+      const _0x5cabfc = document.createElement("span");
+      _0x5cabfc.style.position = "relative";
+      _0x5cabfc.style.display = 'inline-block';
+      _0x5cabfc.style.width = "60px";
+      _0x5cabfc.style.height = "34px";
+      _0x5cabfc.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+      _0x5cabfc.style.borderRadius = "34px";
+      _0x5cabfc.style.cursor = 'pointer';
+      const _0x21b866 = document.createElement("span");
+      _0x21b866.style.position = "absolute";
+      _0x21b866.style.top = "2px";
+      _0x21b866.style.left = "2px";
+      _0x21b866.style.width = "30px";
+      _0x21b866.style.height = "30px";
+      _0x21b866.style.backgroundColor = '#f9c717';
+      _0x21b866.style.borderRadius = "50%";
+      _0x21b866.style.transition = "left 0.2s";
+      let _0x56ca28 = localStorage.getItem("scriptState_slowly_5") === "true";
+      _0x11945f.checked = _0x56ca28;
+      if (_0x56ca28) {
+        _0x5cabfc.style.backgroundColor = '#fafe0d';
+        _0x21b866.style.left = "28px";
+      }
+      _0x5cabfc.addEventListener('click', function () {
+        if (_0x11945f.checked) {
+          _0x11945f.checked = false;
+          localStorage.setItem("scriptState_slowly_5", "false");
+          _0x5cabfc.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+          _0x21b866.style.left = "2px";
+        } else {
+          _0x11945f.checked = true;
+          localStorage.setItem('scriptState_slowly_5', "true");
+          _0x5cabfc.style.backgroundColor = '#fafe0d';
+          _0x21b866.style.left = "28px";
+        }
+      });
+      _0x5cabfc.appendChild(_0x21b866);
+      _0x3dac2e.appendChild(_0x3b4b9d);
+      _0x3dac2e.appendChild(_0x5cabfc);
+      document.body.appendChild(_0x3dac2e);
+      function _0x288156() {
+        const _0xf66f48 = document.getElementsByTagName('h3');
+        for (let _0x34231 = 0x0; _0x34231 < _0xf66f48.length; _0x34231++) {
+          if (_0xf66f48[_0x34231].textContent.trim() === "TTVCampaign-E0028:All positions taken already") {
+            let _0x398a0e = localStorage.getItem("refreshCount");
+            if (!_0x398a0e) {
+              _0x398a0e = 0x0;
+            }
+            _0x398a0e++;
+            localStorage.setItem('refreshCount', _0x398a0e);
+            if (_0x398a0e >= 0x5) {
+              const _0x3115d8 = document.querySelectorAll('a');
+              for (let _0x1148a0 = 0x0; _0x1148a0 < _0x3115d8.length; _0x1148a0++) {
+                if (_0x3115d8[_0x1148a0].textContent.trim() === "Jobs") {
+                  _0x3115d8[_0x1148a0].addEventListener("click", function () {
+                    localStorage.setItem("refreshCount", 0x0);
+                  });
+                  _0x3115d8[_0x1148a0].click();
+                  break;
+                }
+              }
+            }
+            break;
+          }
+        }
+      }
+      if (_0x56ca28) {
+        _0x288156();
+      }
+    })();
+  }
+  (function () {
+    'use strict';
+  
+    const _0x339e24 = ["https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09", "https://www.microworkers.com/jobs.php"];
+    let _0x3c346f = localStorage.getItem("scriptState_E502_1033") === "true";
+    function _0x3c1410() {
+      if (!_0x3c346f) {
+        return;
+      }
+      var _0x92d143 = document.querySelectorAll('a');
+      _0x92d143.forEach(function (_0x3189a) {
+        if (_0x3189a.textContent.trim() === "TTV-Data Entry from images (E502-1033)") {
+          _0x3189a.click();
+          chrome.runtime.sendMessage({
+            'action': "showNotification",
+            'message': "TTV-Data Collection E502_1033 Selected"
+          });
+        }
+      });
+    }
+    function _0x195292() {
+      const _0x4194b0 = document.createElement("button");
+      _0x4194b0.textContent = _0x3c346f ? '1033-ON' : '1033-OFF';
+      _0x4194b0.style.position = 'fixed';
+      _0x4194b0.style.low = "10px";
+      _0x4194b0.style.right = '500px';
+      _0x4194b0.style.zIndex = '1000';
+      _0x4194b0.style.padding = '8px';
+      _0x4194b0.style.backgroundColor = _0x3c346f ? "green" : "red";
+      _0x4194b0.style.color = "white";
+      _0x4194b0.style.border = 'none';
+      _0x4194b0.style.borderRadius = "5px";
+      _0x4194b0.style.cursor = "pointer";
+      _0x4194b0.style.fontSize = "14px";
+      _0x4194b0.addEventListener("click", function () {
+        _0x3c346f = !_0x3c346f;
+        localStorage.setItem("scriptState_E502_1033", _0x3c346f);
+        _0x4194b0.textContent = _0x3c346f ? "1033-ON" : "1033-OFF";
+        _0x4194b0.style.backgroundColor = _0x3c346f ? 'green' : "red";
+      });
+      document.body.appendChild(_0x4194b0);
+    }
+    function _0x3cebe9() {
+      return _0x339e24.some(_0xf31a54 => window.location.href.startsWith(_0xf31a54));
+    }
+    function _0x5df703() {
+      window.addEventListener('message', function (_0x4395e5) {
+        if (_0x4395e5.data === "runFullScript") {
+          _0x3c1410();
+        }
+      });
+    }
+    window.addEventListener("load", function () {
+      if (_0x3cebe9()) {
+        _0x195292();
+        _0x5df703();
+        _0x3c1410();
+      }
+    });
+  })();
+  (function () {
+    'use strict';
+  
+    const _0xc86fe2 = ["https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09", "https://www.microworkers.com/jobs.php"];
+    let _0x5910ef = localStorage.getItem('scriptState_E1096-1891') === "true";
+    function _0x1c082b() {
+      if (!_0x5910ef) {
+        return;
+      }
+      var _0x28d9fa = document.querySelectorAll('a');
+      _0x28d9fa.forEach(function (_0x4da3ad) {
+        if (_0x4da3ad.textContent.trim() === "TTV-Data Entry from images (E1096-1891)") {
+          _0x4da3ad.click();
+          chrome.runtime.sendMessage({
+            'action': "showNotification",
+            'message': "TTV-Data Collection E1096-1891 Selected"
+          });
+        }
+      });
+    }
+    function _0x46ee0() {
+      const _0x4e000b = document.createElement("button");
+      _0x4e000b.textContent = _0x5910ef ? "1891-ON" : "1891-OFF";
+      _0x4e000b.style.position = "fixed";
+      _0x4e000b.style.low = "10px";
+      _0x4e000b.style.right = '672px';
+      _0x4e000b.style.zIndex = "1000";
+      _0x4e000b.style.padding = '8px';
+      _0x4e000b.style.backgroundColor = _0x5910ef ? 'green' : "coral";
+      _0x4e000b.style.color = "white";
+      _0x4e000b.style.border = 'none';
+      _0x4e000b.style.borderRadius = "5px";
+      _0x4e000b.style.cursor = "pointer";
+      _0x4e000b.style.fontSize = "14px";
+      _0x4e000b.addEventListener("click", function () {
+        _0x5910ef = !_0x5910ef;
+        localStorage.setItem('scriptState_E1096-1891', _0x5910ef);
+        _0x4e000b.textContent = _0x5910ef ? "1891-ON" : '1891-OFF';
+        _0x4e000b.style.backgroundColor = _0x5910ef ? "green" : 'coral';
+      });
+      document.body.appendChild(_0x4e000b);
+    }
+    function _0x44a007() {
+      return _0xc86fe2.some(_0xdc3be => window.location.href.startsWith(_0xdc3be));
+    }
+    function _0x3e526f() {
+      window.addEventListener("message", function (_0x5e2399) {
+        if (_0x5e2399.data === "runFullScript") {
+          _0x1c082b();
+        }
+      });
+    }
+    window.addEventListener("load", function () {
+      if (_0x44a007()) {
+        _0x46ee0();
+        _0x3e526f();
+        _0x1c082b();
+      }
+    });
+  })();
+  (function () {
+    'use strict';
+  
+    const _0x28a908 = ["https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09", "https://www.microworkers.com/jobs.php"];
+    let _0x386d31 = localStorage.getItem("scriptState_E471-970") === "true";
+    function _0x1c0840() {
+      if (!_0x386d31) {
+        return;
+      }
+      var _0x3c1e97 = document.querySelectorAll('a');
+      _0x3c1e97.forEach(function (_0xf81822) {
+        if (_0xf81822.textContent.trim() === "TTV-Data Entry from images (E471-970)") {
+          _0xf81822.click();
+          chrome.runtime.sendMessage({
+            'action': "showNotification",
+            'message': "TTV-Data Collection E471-970 Selected"
+          });
+        }
+      });
+    }
+    function _0x2824ba() {
+      const _0x4e721e = document.createElement("button");
+      _0x4e721e.textContent = _0x386d31 ? "970-ON" : "970-OFF";
+      _0x4e721e.style.position = 'fixed';
+      _0x4e721e.style.low = "10px";
+      _0x4e721e.style.right = "590px";
+      _0x4e721e.style.zIndex = '1000';
+      _0x4e721e.style.padding = "8px";
+      _0x4e721e.style.backgroundColor = _0x386d31 ? "brown" : 'blue';
+      _0x4e721e.style.color = "white";
+      _0x4e721e.style.border = "none";
+      _0x4e721e.style.borderRadius = "5px";
+      _0x4e721e.style.cursor = "pointer";
+      _0x4e721e.style.fontSize = '14px';
+      _0x4e721e.addEventListener("click", function () {
+        _0x386d31 = !_0x386d31;
+        localStorage.setItem("scriptState_E471-970", _0x386d31);
+        _0x4e721e.textContent = _0x386d31 ? "970-ON" : "970-OFF";
+        _0x4e721e.style.backgroundColor = _0x386d31 ? 'brown' : "blue";
+      });
+      document.body.appendChild(_0x4e721e);
+    }
+    function _0x295956() {
+      return _0x28a908.some(_0x31f21b => window.location.href.startsWith(_0x31f21b));
+    }
+    function _0x51ed2d() {
+      window.addEventListener("message", function (_0x3da9f9) {
+        if (_0x3da9f9.data === "runFullScript") {
+          _0x1c0840();
+        }
+      });
+    }
+    window.addEventListener("load", function () {
+      if (_0x295956()) {
+        _0x2824ba();
+        _0x51ed2d();
+        _0x1c0840();
+      }
+    });
+  })();
+  (function () {
+    'use strict';
+  
+    const _0x134d54 = ["https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09", 'https://www.microworkers.com/jobs.php'];
+    let _0x27fb90 = localStorage.getItem('scriptState_E364-430') === "true";
+    function _0x23e8ca() {
+      if (!_0x27fb90) {
+        return;
+      }
+      var _0x3d3ef2 = document.querySelectorAll('a');
+      _0x3d3ef2.forEach(function (_0x3bd6e3) {
+        if (_0x3bd6e3.textContent.trim() === "TTV-Data Entry (Pre-fixed-364-430)") {
+          _0x3bd6e3.click();
+          chrome.runtime.sendMessage({
+            'action': "showNotification",
+            'message': "TTV-Data Collection E364-430 Selected"
+          });
+        }
+      });
+    }
+    function _0x51c619() {
+      const _0x23cbff = document.createElement("button");
+      _0x23cbff.textContent = _0x27fb90 ? "430-ON" : "430-OFF";
+      _0x23cbff.style.position = "fixed";
+      _0x23cbff.style.low = "10px";
+      _0x23cbff.style.right = "762px";
+      _0x23cbff.style.zIndex = "1000";
+      _0x23cbff.style.padding = "8px";
+      _0x23cbff.style.backgroundColor = _0x27fb90 ? "Olive" : "black";
+      _0x23cbff.style.color = 'white';
+      _0x23cbff.style.border = "none";
+      _0x23cbff.style.borderRadius = '5px';
+      _0x23cbff.style.cursor = "pointer";
+      _0x23cbff.style.fontSize = "14px";
+      _0x23cbff.addEventListener("click", function () {
+        _0x27fb90 = !_0x27fb90;
+        localStorage.setItem('scriptState_E364-430', _0x27fb90);
+        _0x23cbff.textContent = _0x27fb90 ? '430-ON' : "430-OFF";
+        _0x23cbff.style.backgroundColor = _0x27fb90 ? 'Olive' : "black";
+      });
+      document.body.appendChild(_0x23cbff);
+    }
+    function _0x23b5be() {
+      return _0x134d54.some(_0x5dfa29 => window.location.href.startsWith(_0x5dfa29));
+    }
+    function _0x487ef8() {
+      window.addEventListener("message", function (_0x43c848) {
+        if (_0x43c848.data === "runFullScript") {
+          _0x23e8ca();
+        }
+      });
+    }
+    window.addEventListener("load", function () {
+      if (_0x23b5be()) {
+        _0x51c619();
+        _0x487ef8();
+        _0x23e8ca();
+      }
+    });
+  })();
+  (function () {
+    'use strict';
+  
+    const _0x497284 = ["https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09", "https://www.microworkers.com/jobs.php"];
+    let _0x25fb83 = localStorage.getItem('scriptState_E766-1470') === 'true';
+    function _0xb95e68() {
+      if (!_0x25fb83) {
+        return;
+      }
+      var _0x18aff2 = document.querySelectorAll('a');
+      _0x18aff2.forEach(function (_0x2a2c71) {
+        if (_0x2a2c71.textContent.trim() === "TTV-Data Entry - PC required. Not for mobile phones. (E766-1470)") {
+          _0x2a2c71.click();
+          chrome.runtime.sendMessage({
+            'action': "showNotification",
+            'message': "TTV-Data Collection E766-1470 Selected"
+          });
+        }
+      });
+    }
+    function _0x30149a() {
+      const _0x4e3466 = document.createElement("button");
+      _0x4e3466.textContent = _0x25fb83 ? "1470-ON" : "1470-OFF";
+      _0x4e3466.style.position = "fixed";
+      _0x4e3466.style.low = "10px";
+      _0x4e3466.style.right = '844px';
+      _0x4e3466.style.zIndex = '1000';
+      _0x4e3466.style.padding = '8px';
+      _0x4e3466.style.backgroundColor = _0x25fb83 ? "Cyan" : "Magenta";
+      _0x4e3466.style.color = "white";
+      _0x4e3466.style.border = 'none';
+      _0x4e3466.style.borderRadius = '5px';
+      _0x4e3466.style.cursor = "pointer";
+      _0x4e3466.style.fontSize = "14px";
+      _0x4e3466.addEventListener('click', function () {
+        _0x25fb83 = !_0x25fb83;
+        localStorage.setItem('scriptState_E766-1470', _0x25fb83);
+        _0x4e3466.textContent = _0x25fb83 ? "1470-ON" : "1470-OFF";
+        _0x4e3466.style.backgroundColor = _0x25fb83 ? "Cyan" : "Magenta";
+      });
+      document.body.appendChild(_0x4e3466);
+    }
+    function _0x4dedb5() {
+      return _0x497284.some(_0x291043 => window.location.href.startsWith(_0x291043));
+    }
+    function _0x326b92() {
+      window.addEventListener("message", function (_0x3d0289) {
+        if (_0x3d0289.data === "runFullScript") {
+          _0xb95e68();
+        }
+      });
+    }
+    window.addEventListener("load", function () {
+      if (_0x4dedb5()) {
+        _0x30149a();
+        _0x326b92();
+        _0xb95e68();
+      }
+    });
+  })();
+  function ttv3() {
+    let _0x3fd8e6 = localStorage.getItem("scriptState_E16brackdown") === "true";
+    function _0x5a47d7() {
+      const _0xb269ab = document.querySelector("#content h3");
+      if (_0xb269ab) {
+        console.log("H3 element found. Skipping click action.");
+        return;
+      }
+      function _0x29c894() {
+        const _0x1a9a77 = document.querySelector("[name=\"CampaignId\"]+button");
+        if (_0x1a9a77) {
+          _0x1a9a77.click();
+          console.log("Button clicked");
+        } else {
+          console.log("Button not found");
+        }
+      }
+      const _0x3f29e4 = localStorage.getItem('lastClickTime_E16brackdown');
+      const _0x4a7ef7 = new Date().getTime();
+      if (!_0x3f29e4 || _0x4a7ef7 - _0x3f29e4 > 0x4e20) {
+        _0x29c894();
+        localStorage.setItem("lastClickTime_E16brackdown", _0x4a7ef7);
+        setTimeout(() => {
+          if (document.querySelector("[name=\"CampaignId\"]+button")) {
+            _0x29c894();
+          }
+        }, 0x4e20);
+      } else {
+        console.log("Click skipped due to 20 seconds gap rule");
+      }
+    }
+    function _0x8f498e() {
+      if (_0x3fd8e6) {
+        _0x3fd8e6 = false;
+        localStorage.setItem("scriptState_E16brackdown", "false");
+        controlButton.style.backgroundColor = "#ffdf00";
+        controlButton.textContent = "Brack Down Mood Is INACTIVED";
+        console.log("Script is now inactive");
+      } else {
+        _0x3fd8e6 = true;
+        localStorage.setItem("scriptState_E16brackdown", "true");
+        controlButton.style.backgroundColor = "#4caf50";
+        controlButton.textContent = "Brack Down Mood Is ACTIVED";
+        console.log("Script is now active");
+        _0x5a47d7();
+      }
+    }
+    function _0x43c1e2() {
+      const _0x12513d = window.location.href;
+      const _0x5864da = /^https:\/\/ttv\.microworkers\.com\/dotask\/info\/.*/;
+      if (_0x5864da.test(_0x12513d)) {
+        _0x506c7b();
+      } else {
+        console.log("URL does not match the required pattern.");
+      }
+    }
+    function _0x506c7b() {
+      const _0x6d6927 = document.createElement("button");
+      _0x6d6927.id = "controlButton";
+      _0x6d6927.style.position = "fixed";
+      _0x6d6927.style.bottom = '20px';
+      _0x6d6927.style.right = "20px";
+      _0x6d6927.style.padding = '8px';
+      _0x6d6927.style.color = _0x3fd8e6 ? '#000000' : "#ffffff";
+      _0x6d6927.style.borderRadius = '12px';
+      _0x6d6927.style.fontSize = "18px";
+      _0x6d6927.style.fontWeight = "bold";
+      _0x6d6927.style.textTransform = "uppercase";
+      _0x6d6927.style.backgroundColor = _0x3fd8e6 ? "#4caf50" : "#ffdf00";
+      _0x6d6927.style.boxShadow = "0px 6px 12px rgba(0, 0, 0, 0.2)";
+      _0x6d6927.style.cursor = "pointer";
+      _0x6d6927.style.transition = "background-color 0.4s, transform 0.3s";
+      _0x6d6927.addEventListener('mouseenter', () => {
+        _0x6d6927.style.transform = "scale(1.05)";
+      });
+      _0x6d6927.addEventListener("mouseleave", () => {
+        _0x6d6927.style.transform = 'scale(1)';
+      });
+      _0x6d6927.addEventListener("click", _0x8f498e);
+      document.body.appendChild(_0x6d6927);
+      if (_0x3fd8e6) {
+        _0x5a47d7();
+      }
+    }
+    _0x43c1e2();
+  }
+  function ttv4() {
+    let _0x469e48 = localStorage.getItem("scriptState_E16activemood") === "true";
+    function _0xb91ee4() {
+      const _0x58c434 = document.querySelector("#content h3");
+      if (_0x58c434) {
+        console.log("H3 element found. Skipping click action.");
+        return;
+      }
+      function _0x3aabf5() {
+        const _0x253e5e = document.querySelector("[name=\"CampaignId\"]+button");
+        if (_0x253e5e) {
+          _0x253e5e.click();
+          console.log("Button clicked");
+        } else {
+          console.log("Button not found");
+        }
+      }
+      const _0x1ec876 = localStorage.getItem("lastClickTime_E16activemood");
+      const _0x6fd90d = new Date().getTime();
+      if (!_0x1ec876 || _0x6fd90d - _0x1ec876 > 0xc8) {
+        _0x3aabf5();
+        localStorage.setItem("lastClickTime_E16activemood", _0x6fd90d);
+        setTimeout(() => {
+          if (document.querySelector("[name=\"CampaignId\"]+button")) {
+            _0x3aabf5();
+          }
+        }, 0xc8);
+        console.log("Click skipped due to 200 milliseconds gap rule");
+      }
+    }
+    function _0x26d1ea() {
+      if (_0x469e48) {
+        _0x469e48 = false;
+        localStorage.setItem("scriptState_E16activemood", "false");
+        controlButton.style.backgroundColor = '#0000cd';
+        controlButton.textContent = "Active Mood Is INACTIVED";
+        console.log("Script is now inactive");
+      } else {
+        _0x469e48 = true;
+        localStorage.setItem("scriptState_E16activemood", "true");
+        controlButton.style.backgroundColor = "#f44336";
+        controlButton.textContent = "Active Mood Is ACTIVED";
+        console.log("Script is now active");
+        _0xb91ee4();
+      }
+    }
+    function _0x3f00b8() {
+      const _0x2669bb = window.location.href;
+      const _0x53f98d = /^https:\/\/ttv\.microworkers\.com\/dotask\/info\/.*/;
+      if (_0x53f98d.test(_0x2669bb)) {
+        _0x4d07e3();
+      } else {
+        console.log("URL does not match the required pattern.");
+      }
+    }
+    function _0x4d07e3() {
+      const _0x120d81 = document.createElement("button");
+      _0x120d81.id = "controlButton_E16activemood";
+      _0x120d81.style.position = "fixed";
+      _0x120d81.style.bottom = '55px';
+      _0x120d81.style.right = "20px";
+      _0x120d81.style.padding = '8px';
+      _0x120d81.style.color = "#ffffff";
+      _0x120d81.style.borderRadius = "12px";
+      _0x120d81.style.fontSize = '18px';
+      _0x120d81.style.fontWeight = "bold";
+      _0x120d81.style.textTransform = "uppercase";
+      _0x120d81.style.backgroundColor = _0x469e48 ? "#f44336" : "#0000cd";
+      _0x120d81.style.boxShadow = "0px 6px 12px rgba(0, 0, 0, 0.2)";
+      _0x120d81.style.cursor = "pointer";
+      _0x120d81.style.transition = "background-color 0.4s, transform 0.3s";
+      _0x120d81.addEventListener("mouseenter", () => {
+        _0x120d81.style.transform = 'scale(1.05)';
+      });
+      _0x120d81.addEventListener("mouseleave", () => {
+        _0x120d81.style.transform = "scale(1)";
+      });
+      _0x120d81.addEventListener('click', _0x26d1ea);
+      document.body.appendChild(_0x120d81);
+      if (_0x469e48) {
+        _0xb91ee4();
+      }
+    }
+    _0x3f00b8();
+  }
+  function doTaskAgain() {
+    document.querySelector('.glyphicon.glyphicon-repeat')?.["click"]();
+  }
+  function ttv5() {
+    (function () {
+      'use strict';
+  
+      function _0x5a155f() {
+        if (window.location.href !== "https://www.microworkers.com/jobs.php?Filter=no&Sort=NEWEST&Id_category=09") {
+          document.querySelector("a[href='/jobs.php?Filter=no&Sort=NEWEST&Id_category=09']")?.["click"]();
+        }
+      }
+      setTimeout(_0x5a155f, 0x1f40);
+    })();
+  }
+  function ttv6() {
+    (function () {
+      'use strict';
+  
+      if (window.location.href.includes("/jobs.php?Filter=no&Sort=NEWEST&Id_category=09")) {
+        let _0x1f77e5 = localStorage.getItem("autoRefreshActive") === "true";
+        const _0x164c1a = document.createElement("button");
+        _0x164c1a.style.position = "fixed";
+        _0x164c1a.style.top = "180px";
+        _0x164c1a.style.left = "0px";
+        _0x164c1a.style.padding = "8px";
+        _0x164c1a.style.color = "#fff";
+        _0x164c1a.style.border = "5px solid";
+        _0x164c1a.style.borderRadius = '100%';
+        _0x164c1a.style.cursor = "pointer";
+        _0x164c1a.style.transition = "border-color 0.5s linear";
+        function _0x4445fe() {
+          if (_0x1f77e5) {
+            _0x164c1a.innerText = 'On';
+            _0x164c1a.style.backgroundColor = "red";
+            _0x42af5f();
+          } else {
+            _0x164c1a.innerText = 'Off';
+            _0x164c1a.style.backgroundColor = "#ff0000";
+            _0x164c1a.style.borderColor = '#ff0000';
+          }
+        }
+        function _0x42af5f() {
+          let _0x4c5ff9 = 0x0;
+          setInterval(function () {
+            if (_0x1f77e5) {
+              _0x4c5ff9 = (_0x4c5ff9 + 0x2) % 0x168;
+              _0x164c1a.style.borderColor = "hsl(" + _0x4c5ff9 + ", 100%, 50%)";
+            }
+          }, 0x32);
+        }
+        _0x4445fe();
+        document.body.appendChild(_0x164c1a);
+        _0x164c1a.addEventListener("click", function () {
+          _0x1f77e5 = !_0x1f77e5;
+          localStorage.setItem("autoRefreshActive", _0x1f77e5);
+          _0x4445fe();
+        });
+        function _0x5dc0de() {
+          if (!_0x1f77e5) {
+            return;
+          }
+          const _0x45c35e = new Date();
+          const _0x44c05d = _0x45c35e.getMinutes();
+          const _0x39feba = _0x45c35e.getSeconds();
+          if (_0x44c05d % 0x3 === 0x0 && (_0x39feba === 0x2 || _0x39feba === 0x21) || _0x44c05d % 0x3 === 0x1 && (_0x39feba === 0x3 || _0x39feba === 0x20 || _0x39feba === 0x2e) || _0x44c05d % 0x3 === 0x2 && (_0x39feba === 0x2 || _0x39feba === 0x20)) {
+            location.reload();
+          }
+        }
+        setInterval(_0x5dc0de, 0x3e8);
+      } else {
+        console.log("The script is not running on this URL.");
+      }
+    })();
+  }
+  function ttvaction() {}
+  function ttv7() {
+    (function () {
+      'use strict';
+  
+      function _0x1e7058() {
+        try {
+          const _0x11b1a5 = document.querySelector(".accept-start-button");
+          if (_0x11b1a5) {
+            const _0x3c7e8d = new MouseEvent("click", {
+              'bubbles': true,
+              'cancelable': true,
+              'view': window
+            });
+            setTimeout(function () {
+              _0x11b1a5.dispatchEvent(_0x3c7e8d);
+            }, 0x3e8);
+          } else {
+            console.error("Accept-start button not found");
+          }
+        } catch (_0x457d68) {
+          console.error("Error clicking accept-start button:", _0x457d68.message);
+        }
+      }
+      function _0x5499fa() {
+        try {
+          const _0x2ecc42 = new Date();
+          const _0x1b2ffb = _0x2ecc42.getSeconds();
+          if (_0x1b2ffb === 0x1 || _0x1b2ffb === 0x1f) {
+            _0x1e7058();
+          }
+        } catch (_0x5c1ad6) {
+          console.error("Error triggering accept-start button click:", _0x5c1ad6.message);
+        }
+      }
+      function _0x158d26() {
+        const _0x4e944f = document.createElement('button');
+        _0x4e944f.id = 'toggleButton';
+        _0x4e944f.style.position = "fixed";
+        _0x4e944f.style.bottom = '40%';
+        _0x4e944f.style.right = "11px";
+        _0x4e944f.style.padding = "10px";
+        _0x4e944f.style.border = 'none';
+        _0x4e944f.style.borderRadius = "8px";
+        _0x4e944f.style.cursor = 'pointer';
+        document.body.appendChild(_0x4e944f);
+        function _0x4d1a76() {
+          let _0x3e22ab = localStorage.getItem("scriptState_2_32") === "true";
+          if (_0x3e22ab) {
+            _0x4e944f.style.backgroundColor = 'green';
+            _0x4e944f.style.color = "white";
+            _0x4e944f.innerHTML = "2/32 ON";
+          } else {
+            _0x4e944f.style.backgroundColor = 'red';
+            _0x4e944f.style.color = "white";
+            _0x4e944f.innerHTML = "2/32 OFF";
+          }
+        }
+        _0x4e944f.addEventListener('click', () => {
+          let _0xb6c48b = localStorage.getItem('scriptState_2_32') === "true";
+          localStorage.setItem("scriptState_2_32", !_0xb6c48b);
+          _0x4d1a76();
+        });
+        _0x4d1a76();
+      }
+      if (window.location.href.startsWith("https://ttv.microworkers.com/dotask/info/")) {
+        setInterval(() => {
+          let _0x11fbec = localStorage.getItem("scriptState_2_32") === "true";
+          if (_0x11fbec) {
+            _0x5499fa();
+          }
+        }, 0x3e8);
+        _0x158d26();
+      }
+    })();
+    (function () {
+      'use strict';
+  
+      function _0x586639() {
+        try {
+          const _0x171fa1 = document.querySelector(".accept-start-button");
+          if (_0x171fa1) {
+            const _0x59a562 = new MouseEvent("click", {
+              'bubbles': true,
+              'cancelable': true,
+              'view': window
+            });
+            setTimeout(function () {
+              _0x171fa1.dispatchEvent(_0x59a562);
+            }, 0x3e8);
+          } else {
+            console.error("Accept-start button not found");
+          }
+        } catch (_0x3fa4d0) {
+          console.error("Error clicking accept-start button:", _0x3fa4d0.message);
+        }
+      }
+      function _0x497a93() {
+        try {
+          const _0x292c53 = new Date();
+          const _0x3da62e = _0x292c53.getSeconds();
+          if (_0x3da62e === 0x2 || _0x3da62e === 0x20) {
+            _0x586639();
+          }
+        } catch (_0x3e8590) {
+          console.error("Error triggering accept-start button click:", _0x3e8590.message);
+        }
+      }
+      function _0xc94b98() {
+        const _0x273bde = document.createElement("button");
+        _0x273bde.id = 'toggleButton';
+        _0x273bde.style.position = 'fixed';
+        _0x273bde.style.bottom = "40%";
+        _0x273bde.style.right = "130px";
+        _0x273bde.style.padding = "10px";
+        _0x273bde.style.border = "none";
+        _0x273bde.style.borderRadius = "8px";
+        _0x273bde.style.cursor = 'pointer';
+        document.body.appendChild(_0x273bde);
+        function _0x2cb075() {
+          let _0x34c353 = localStorage.getItem("scriptState_3_33") === "true";
+          if (_0x34c353) {
+            _0x273bde.style.backgroundColor = "green";
+            _0x273bde.style.color = "white";
+            _0x273bde.innerHTML = "3/33 ON";
+          } else {
+            _0x273bde.style.backgroundColor = "red";
+            _0x273bde.style.color = "white";
+            _0x273bde.innerHTML = "3/33 OFF";
+          }
+        }
+        _0x273bde.addEventListener('click', () => {
+          let _0x40d84c = localStorage.getItem("scriptState_3_33") === "true";
+          localStorage.setItem("scriptState_3_33", !_0x40d84c);
+          _0x2cb075();
+        });
+        _0x2cb075();
+      }
+      if (window.location.href.startsWith("https://ttv.microworkers.com/dotask/info/")) {
+        setInterval(() => {
+          let _0x10243 = localStorage.getItem('scriptState_3_33') === "true";
+          if (_0x10243) {
+            _0x497a93();
+          }
+        }, 0x3e8);
+        _0xc94b98();
+      }
+    })();
+  }
+  function ttvmanuyal() {
+    (function () {
+      'use strict';
+  
+      let _0x509e0b = true;
+      function _0x2a164f(_0x2f3c81) {
+        const _0x453119 = /\/dotask\/info\/([^\/]+)/;
+        const _0x4435fc = _0x2f3c81.match(_0x453119);
+        return _0x4435fc ? _0x4435fc[0x1] : null;
+      }
+      function _0x27d8c3() {
+        if (!_0x509e0b) {
+          return;
+        }
+        try {
+          const _0x3cd80 = document.querySelector(".accept-start-button");
+          if (_0x3cd80) {
+            const _0x6f48ed = new MouseEvent("click", {
+              'bubbles': true,
+              'cancelable': true,
+              'view': window
+            });
+            setTimeout(function () {
+              _0x3cd80.dispatchEvent(_0x6f48ed);
+            }, 0x3e8);
+          } else {
+            console.error("Accept-start button not found");
+          }
+        } catch (_0x6e5d3f) {
+          console.error("Error clicking accept-start button:", _0x6e5d3f.message);
+        }
+      }
+      function _0x2dd148() {
+        if (!_0x509e0b) {
+          return;
+        }
+        try {
+          const _0x1467e4 = new Date();
+          const _0x1be930 = _0x1467e4.getSeconds();
+          const _0x23a377 = parseInt(localStorage.getItem("felkoan_007_firstTriggerSecond") || '1', 0xa);
+          const _0x2a0cec = parseInt(localStorage.getItem('felkoan_007_secondTriggerSecond') || '31', 0xa);
+          if (_0x1be930 === _0x23a377 || _0x1be930 === _0x2a0cec) {
+            _0x27d8c3();
+          }
+        } catch (_0x3f439f) {
+          console.error("Error triggering accept-start button click:", _0x3f439f.message);
+        }
+      }
+      function _0x12e21a() {
+        try {
+          const _0x443ac5 = window.location.href;
+          if (_0x443ac5.startsWith("https://ttv.microworkers.com/dotask/info/")) {
+            const _0x5167a8 = document.createElement("form");
+            _0x5167a8.action = "/dotask/allocateposition";
+            _0x5167a8.method = "POST";
+            const _0x75d1da = _0x2a164f(_0x443ac5);
+            const _0x362ed1 = document.createElement("input");
+            _0x362ed1.type = 'hidden';
+            _0x362ed1.name = "CampaignId";
+            _0x362ed1.value = _0x75d1da;
+            const _0x169703 = document.createElement("button");
+            _0x169703.type = "submit";
+            _0x169703.className = "btn btn-primary accept-start-button";
+            _0x169703.innerHTML = "<i class=\"glyphicon glyphicon-play\"></i> Accept and Start";
+            _0x169703.onclick = function () {
+              this.disabled = true;
+              this.form.submit();
+            };
+            _0x5167a8.appendChild(_0x362ed1);
+            _0x169703.style.display = "non";
+            _0x5167a8.appendChild(_0x169703);
+            document.body.appendChild(_0x5167a8);
+            const _0x3156b9 = document.createElement("style");
+            _0x3156b9.innerHTML = "\n                        .accept-start-button {\n                            background-color: red;\n                            color: yellow;\n                            padding: 15px 25px;\n                            border: none;\n                            border-radius: 5px;\n                            cursor: pointer;\n                            position: fixed;\n                            bottom: 200px;\n                            right: 20px;\n                        }\n                        .accept-start-button:hover {\n                            background-color: olive;\n                        }\n                        .settings-container {\n                            position: fixed;\n                            top: 360px;\n                            right: 10px;\n                            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */\n                            color: white;\n                            padding: 5px;\n                            border-radius: 8px;\n                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n                            z-index: 1000;\n                            width: 200px;\n                            text-align: center;\n                            font-family: Arial, sans-serif;\n                        }\n                        .settings-container h4 {\n                            margin-bottom: 15px;\n                            color: #61dafb;\n                        }\n                        .settings-container label {\n                            display: block;\n                            margin: 10px 0 5px;\n                            font-size: 14px;\n                        }\n                        .settings-container select {\n                            width: 80%;\n                            padding: 5px;\n                            border: 1px solid #ccc;\n                            border-radius: 4px;\n                            background-color: #f9f9f9;\n                            font-size: 14px;\n                            color: #333;\n                            text-align: center;\n                        }\n                        .settings-container select:focus {\n                            outline: none;\n                            border-color: #61dafb;\n                        }\n                        .dropdown-container {\n                            display: flex;\n                            justify-content: space-between;\n                            gap: 10px;\n                        }\n                        .dropdown-container > div {\n                            flex: 1;\n                        }\n                        .toggle-slider {\n                            position: absolute;\n                            top: 10px; /* Top-right corner inside the container */\n                            right: 10px;\n                            display: flex;\n                            align-items: center;\n                            gap: 10px;\n                            background-color: #D3D3D3; /* Light gray background for inactive state */\n                            border: 1px solid #ccc;\n                            border-radius: 20px;\n                            padding: 5px;\n                            cursor: pointer;\n                            width: 20px; /* Set the width of the slider */\n                            height: 10px;\n                            transition: background-color 0.3s, transform 0.3s ease; /* Smooth transition */\n                        }\n                        .toggle-slider.active {\n                            background-color: #D4EDDA; /* Light green background for active state */\n                        }\n                        .toggle-slider .circle {\n                            position: absolute;\n                            top: 2px;\n                            left: 3px;\n                            width: var(--cr-toggle-bar-width, 16px); /* Width of the button (circle) */\n                            height: 16px;\n                            border-radius: 50px;\n                            background-color: #6C757D; /* Deep gray when inactive */\n                            opacity: 1;\n                            transition: background-color 80ms linear, left 0.3s ease; /* Smooth background color and position transitions */\n                        }\n                        .toggle-slider.active .circle {\n                            background-color: #28A745; /* Deep green when active */\n                            left: calc(100% - 19px); /* Move the circle to the right for active state */\n                        }\n                    ";
+            document.head.appendChild(_0x3156b9);
+            _0x543656();
+            _0x1112a9();
+          }
+        } catch (_0x2eab5a) {
+          console.error("Error adding accept-start button:", _0x2eab5a.message);
+        }
+      }
+      function _0x543656() {
+        const _0x52a94c = document.createElement("div");
+        _0x52a94c.className = "settings-container";
+        const _0x27ad23 = document.createElement('h4');
+        _0x27ad23.textContent = "Felkona Looper";
+        const _0x31eb1d = document.createElement("div");
+        _0x31eb1d.className = "dropdown-container";
+        const _0x33afe5 = _0x1046cc("felkoan_007_firstTriggerSecond", "First");
+        const _0x3aab22 = _0x1046cc("felkoan_007_secondTriggerSecond", "Second");
+        _0x31eb1d.appendChild(_0x33afe5);
+        _0x31eb1d.appendChild(_0x3aab22);
+        _0x52a94c.appendChild(_0x27ad23);
+        _0x52a94c.appendChild(_0x31eb1d);
+        document.body.appendChild(_0x52a94c);
+      }
+      function _0x1046cc(_0x3da0ae, _0x75bb4e) {
+        const _0x5183a0 = document.createElement("div");
+        const _0x5cc3ed = document.createElement("label");
+        _0x5cc3ed.textContent = _0x75bb4e;
+        const _0xea7567 = document.createElement("select");
+        _0xea7567.id = _0x3da0ae;
+        for (let _0x37246f = 0x0; _0x37246f < 0x3c; _0x37246f++) {
+          const _0x55f3ab = document.createElement("option");
+          _0x55f3ab.value = _0x37246f;
+          _0x55f3ab.textContent = _0x37246f;
+          _0xea7567.appendChild(_0x55f3ab);
+        }
+        const _0x4dbfb0 = localStorage.getItem(_0x3da0ae);
+        if (_0x4dbfb0 !== null) {
+          _0xea7567.value = _0x4dbfb0;
+        } else {
+          _0xea7567.value = _0x3da0ae === "felkoan_007_firstTriggerSecond" ? '1' : '31';
+        }
+        _0xea7567.addEventListener("change", _0x576f9d(function () {
+          localStorage.setItem(_0x3da0ae, _0xea7567.value);
+        }, 0x12c));
+        _0x5183a0.appendChild(_0x5cc3ed);
+        _0x5183a0.appendChild(_0xea7567);
+        return _0x5183a0;
+      }
+      function _0x1112a9() {
+        const _0x74bb2e = document.createElement("div");
+        _0x74bb2e.className = 'toggle-slider';
+        _0x74bb2e.innerHTML = "\n                <div class=\"circle\"></div>\n            ";
+        if (localStorage.getItem("scriptActive") === "false") {
+          _0x74bb2e.classList.remove('active');
+          _0x509e0b = false;
+        } else {
+          _0x74bb2e.classList.add("active");
+        }
+        _0x74bb2e.addEventListener("click", function () {
+          _0x509e0b = !_0x509e0b;
+          _0x74bb2e.classList.toggle('active', _0x509e0b);
+          localStorage.setItem("scriptActive", _0x509e0b);
+        });
+        document.querySelector(".settings-container").appendChild(_0x74bb2e);
+      }
+      function _0x576f9d(_0x150113, _0x50b710) {
+        let _0x544bf9;
+        return function () {
+          clearTimeout(_0x544bf9);
+          _0x544bf9 = setTimeout(_0x150113, _0x50b710);
+        };
+      }
+      if (window.location.href.startsWith("https://ttv.microworkers.com/dotask/info/")) {
+        _0x12e21a();
+        setInterval(_0x2dd148, 0x3e8);
+      }
+    })();
+  }
+  function ttv10() {
+    (function () {
+      'use strict';
+  
+      const _0x2aa357 = window.location.href;
+      if (!_0x2aa357.startsWith('https://ttv.microworkers.com/dotask/info/')) {
+        console.log("Script not running: URL does not match target prefix.");
+        return;
+      }
+      const _0x15232a = {
+        'module0': {
+          'first': 0x2,
+          'second': 0x20,
+          'third': 0x21
+        },
+        'module1': {
+          'first': 0x2,
+          'second': 0x21,
+          'third': 0x24
+        },
+        'module2': {
+          'first': 0x2,
+          'second': 0x20
+        }
+      };
+      let _0x52f78b = JSON.parse(localStorage.getItem("felkona_aM007")) || _0x15232a;
+      function _0x237615() {
+        localStorage.setItem("felkona_aM007", JSON.stringify(_0x52f78b));
+      }
+      const _0x454f97 = localStorage.getItem("felkonaMenuVisible") !== "false";
+      function _0x102e50(_0x6bca1e) {
+        const _0x37c998 = document.createElement("button");
+        _0x37c998.textContent = _0x454f97 ? "Menu ▲" : "Menu ▼";
+        _0x37c998.style.position = 'absolute';
+        _0x37c998.style.right = "10px";
+        _0x37c998.style.top = "5px";
+        _0x37c998.style.zIndex = "1000";
+        _0x37c998.style.padding = "5px 10px";
+        _0x37c998.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        _0x37c998.style.color = "white";
+        _0x37c998.style.border = "none";
+        _0x37c998.style.borderRadius = "5px";
+        _0x37c998.style.cursor = "pointer";
+        _0x37c998.addEventListener("click", () => {
+          if (_0x6bca1e.style.display === "none") {
+            _0x6bca1e.style.display = 'block';
+            _0x37c998.textContent = "Menu ▲";
+            localStorage.setItem("felkonaMenuVisible", "true");
+          } else {
+            _0x6bca1e.style.display = "none";
+            _0x37c998.textContent = "Menu ▼";
+            localStorage.setItem("felkonaMenuVisible", "false");
+          }
+        });
+        const _0x3a4f87 = document.querySelector(".pagetitle");
+        if (_0x3a4f87) {
+          _0x3a4f87.style.position = 'relative';
+          _0x3a4f87.appendChild(_0x37c998);
+        } else {
+          console.error("Could not find .employeestatus element to append the button.");
+        }
+      }
+      function _0x29d955() {
+        const _0xf9fb41 = document.createElement("div");
+        _0xf9fb41.id = "dropdown-container";
+        _0xf9fb41.style.position = "fixed";
+        _0xf9fb41.style.top = '330px';
+        _0xf9fb41.style.right = "10px";
+        _0xf9fb41.style.zIndex = "1000";
+        _0xf9fb41.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        _0xf9fb41.style.border = "1px solid #ddd";
+        _0xf9fb41.style.borderRadius = "10px";
+        _0xf9fb41.style.padding = '5px';
+        _0xf9fb41.style.boxShadow = "0 6px 15px rgba(0, 0, 0, 0.2)";
+        _0xf9fb41.style.fontFamily = "Arial, sans-serif";
+        _0xf9fb41.style.fontSize = "12px";
+        if (!_0x454f97) {
+          _0xf9fb41.style.display = 'none';
+        }
+        const _0x217a6a = document.createElement("div");
+        _0x217a6a.style.display = 'flex';
+        _0x217a6a.style.alignItems = "center";
+        _0x217a6a.style.justifyContent = "space-between";
+        _0x217a6a.style.marginBottom = "15px";
+        const _0xcd0f9a = document.createElement("div");
+        _0xcd0f9a.style.fontWeight = "bold";
+        _0xcd0f9a.style.color = "#e0d41f";
+        _0xcd0f9a.textContent = "Felkona Auto Motion";
+        const _0x324971 = _0x5458c6();
+        _0x217a6a.appendChild(_0xcd0f9a);
+        _0x217a6a.appendChild(_0x324971);
+        _0xf9fb41.appendChild(_0x217a6a);
+        const _0x1498e0 = {
+          'marginBottom': "10px",
+          'paddingBottom': "10px",
+          'borderBottom': "1px solid #ccc",
+          'display': 'flex',
+          'gap': "15px"
+        };
+        ['module0', "module1", "module2"].forEach((_0x72fdc, _0x3a2805) => {
+          const _0x4dc8a3 = document.createElement("div");
+          Object.assign(_0x4dc8a3.style, _0x1498e0);
+          const _0x4b2435 = document.createElement("div");
+          _0x4b2435.style.flex = '1';
+          _0x4b2435.style.color = '#fff';
+          _0x4b2435.textContent = "Action :";
+          _0x4dc8a3.appendChild(_0x4b2435);
+          const _0xf0b164 = document.createElement("div");
+          _0xf0b164.style.display = "flex";
+          _0xf0b164.style.flexWrap = "nowrap";
+          _0xf0b164.style.gap = "10px";
+          ['first', 'second', 'third'].forEach(_0x10410a => {
+            if (_0x10410a === "third" && _0x72fdc === "module2") {
+              return;
+            }
+            const _0x95b4bf = document.createElement('div');
+            _0x95b4bf.style.display = 'flex';
+            _0x95b4bf.style.flexDirection = 'column';
+            _0x95b4bf.style.alignItems = "center";
+            _0x95b4bf.style.flex = '1';
+            const _0x129839 = document.createElement("label");
+            _0x129839.textContent = '' + (_0x10410a.charAt(0x0).toUpperCase() + _0x10410a.slice(0x1));
+            _0x129839.style.color = "#fff";
+            _0x129839.style.marginBottom = "5px";
+            const _0xe30951 = document.createElement("select");
+            _0xe30951.style.padding = "5px";
+            _0xe30951.style.border = "1px solid #ccc";
+            _0xe30951.style.borderRadius = "5px";
+            _0xe30951.style.backgroundColor = "#fff";
+            for (let _0x2c7f5a = 0x0; _0x2c7f5a <= 0x3b; _0x2c7f5a++) {
+              const _0x1e96a9 = document.createElement("option");
+              _0x1e96a9.value = _0x2c7f5a;
+              _0x1e96a9.textContent = _0x2c7f5a;
+              if (_0x2c7f5a === _0x52f78b[_0x72fdc][_0x10410a]) {
+                _0x1e96a9.selected = true;
+              }
+              _0xe30951.appendChild(_0x1e96a9);
+            }
+            _0xe30951.addEventListener("change", _0x21b116 => {
+              _0x52f78b[_0x72fdc][_0x10410a] = parseInt(_0x21b116.target.value);
+              _0x237615();
+              console.log("Updated " + _0x72fdc + " " + _0x10410a + ':', _0x52f78b[_0x72fdc]);
+            });
+            _0x95b4bf.appendChild(_0x129839);
+            _0x95b4bf.appendChild(_0xe30951);
+            _0xf0b164.appendChild(_0x95b4bf);
+          });
+          _0x4dc8a3.appendChild(_0xf0b164);
+          _0xf9fb41.appendChild(_0x4dc8a3);
+        });
+        const _0x3cc5db = document.createElement('div');
+        _0x3cc5db.style.textAlign = "center";
+        _0x3cc5db.style.marginTop = "10px";
+        _0x3cc5db.style.color = "#fff";
+        _0x3cc5db.style.fontSize = '12px';
+        _0x3cc5db.textContent = "© Felkona Looper By: Foysal Khan";
+        _0xf9fb41.appendChild(_0x3cc5db);
+        document.body.appendChild(_0xf9fb41);
+        _0x102e50(_0xf9fb41);
+      }
+      function _0x5458c6() {
+        const _0x1ef221 = document.createElement("label");
+        _0x1ef221.style.position = 'relative';
+        _0x1ef221.style.display = "inline-block";
+        _0x1ef221.style.width = "34px";
+        _0x1ef221.style.height = '20px';
+        const _0x5b2b4e = document.createElement("input");
+        _0x5b2b4e.type = "checkbox";
+        _0x5b2b4e.style.opacity = '0';
+        _0x5b2b4e.style.width = '0';
+        _0x5b2b4e.style.height = '0';
+        const _0x46be40 = document.createElement("span");
+        _0x46be40.style.position = 'absolute';
+        _0x46be40.style.cursor = "pointer";
+        _0x46be40.style.top = '0';
+        _0x46be40.style.left = '0';
+        _0x46be40.style.right = '0';
+        _0x46be40.style.bottom = '0';
+        _0x46be40.style.backgroundColor = "#ccc";
+        _0x46be40.style.transition = '.4s';
+        _0x46be40.style.borderRadius = "34px";
+        const _0x591ef7 = document.createElement("span");
+        _0x591ef7.style.position = "absolute";
+        _0x591ef7.style.height = "14px";
+        _0x591ef7.style.width = "14px";
+        _0x591ef7.style.left = "3px";
+        _0x591ef7.style.bottom = "3px";
+        _0x591ef7.style.backgroundColor = 'white';
+        _0x591ef7.style.transition = ".4s";
+        _0x591ef7.style.borderRadius = "50%";
+        _0x46be40.appendChild(_0x591ef7);
+        _0x1ef221.appendChild(_0x5b2b4e);
+        _0x1ef221.appendChild(_0x46be40);
+        const _0x2ea58f = localStorage.getItem("Fl_actionMood") === "true";
+        _0x5b2b4e.checked = _0x2ea58f;
+        _0x2be47f();
+        function _0x2be47f() {
+          _0x46be40.style.backgroundColor = _0x5b2b4e.checked ? 'green' : "#ccc";
+          _0x591ef7.style.transform = _0x5b2b4e.checked ? 'translateX(14px)' : "translateX(0)";
+        }
+        _0x5b2b4e.addEventListener("change", () => {
+          localStorage.setItem('Fl_actionMood', _0x5b2b4e.checked);
+          _0x2be47f();
+        });
+        return _0x1ef221;
+      }
+      function _0x3b48f5(_0x304eb7) {
+        return new Promise(_0x4238c6 => setTimeout(_0x4238c6, Math.max(0x0, _0x304eb7)));
+      }
+      function _0x53b826() {
+        try {
+          const _0x25e6dc = document.querySelector(".accept-start-button");
+          if (_0x25e6dc) {
+            _0x25e6dc.click();
+          } else {
+            console.error("Accept-start button not found");
+          }
+        } catch (_0x5d6d69) {
+          console.error("Error clicking accept-start button:", _0x5d6d69.message);
+        }
+      }
+      async function _0x2d0261() {
+        try {
+          if (localStorage.getItem('Fl_actionMood') !== 'true') {
+            return;
+          }
+          const _0x271a3f = new Date();
+          const _0x33b748 = _0x271a3f.getMinutes();
+          const _0x302d0f = _0x271a3f.getSeconds();
+          let _0x30a395 = false;
+          if (_0x33b748 % 0x3 === 0x0) {
+            const {
+              first: _0x1ad3c5,
+              second: _0x3f1e06,
+              third: _0x49cb8c
+            } = _0x52f78b.module0;
+            _0x30a395 = _0x302d0f === _0x1ad3c5 || _0x302d0f === _0x3f1e06 || _0x302d0f === _0x49cb8c;
+          } else {
+            if (_0x33b748 % 0x3 === 0x1) {
+              const {
+                first: _0x558933,
+                second: _0x57a929,
+                third: _0x186ef3
+              } = _0x52f78b.module1;
+              _0x30a395 = _0x302d0f === _0x558933 || _0x302d0f === _0x57a929 || _0x302d0f === _0x186ef3;
+            } else {
+              if (_0x33b748 % 0x3 === 0x2) {
+                const {
+                  first: _0x3edd4f,
+                  second: _0x37f35f
+                } = _0x52f78b.module2;
+                _0x30a395 = _0x302d0f === _0x3edd4f || _0x302d0f === _0x37f35f;
+              }
+            }
+          }
+          if (_0x30a395) {
+            await _0x3b48f5(-0x190);
+            _0x53b826();
+          }
+        } catch (_0x530177) {
+          console.error("Error in checkAndClick:", _0x530177.message);
+        }
+      }
+      _0x29d955();
+      setInterval(_0x2d0261, 0x3e8);
+    })();
+  }
+  function ttv2() {
+    try {
+      var _0x38c333 = document.querySelector(".col-sm-5");
+      var _0x4c3866 = '';
+      if (_0x38c333) {
+        var _0x517233 = _0x38c333.innerHTML.match(/Work done:\s*<b>(.*?)<\/b>/);
+        if (_0x517233) {
+          _0x4c3866 = _0x517233[0x1];
+          localStorage.setItem("workDoneInfo", _0x4c3866);
+        }
+      }
+      var _0x3a63e1 = document.querySelector(".col-sm-8 h4 b");
+      if (_0x3a63e1) {
+        var _0x3f998a = _0x3a63e1.textContent;
+        var _0xdf3ea8 = _0x3f998a.match(/\((.*?)\)$/);
+        if (_0xdf3ea8) {
+          var _0x2a8c01 = _0xdf3ea8[0x1];
+          localStorage.setItem("extractedPart", _0x2a8c01);
+          localStorage.setItem('lastExtractedTime', new Date().toISOString());
+          createOrUpdateBox(_0x2a8c01, _0x4c3866);
+        }
+      }
+      var _0x49b85d = document.getElementById("infoDiv");
+      if (!_0x49b85d) {
+        _0x49b85d = document.createElement("div");
+        _0x49b85d.id = 'infoDiv';
+        document.body.appendChild(_0x49b85d);
+      }
+      updateWorkDoneInfo();
+    } catch (_0x3815e0) {
+      console.error("Error processing the data:", _0x3815e0.message);
+    }
+  }
+  function updateWorkDoneInfo() {
+    var _0xf8fa9a = document.getElementById("infoDiv");
+    var _0x296660 = localStorage.getItem("workDoneInfo");
+    if (_0xf8fa9a && _0x296660) {
+      _0xf8fa9a.innerHTML = _0x296660;
+    }
+  }
+  function createOrUpdateBox(_0x44f18e, _0x144dc2) {
+    var _0xed370c = document.getElementById('extractedBox');
+    if (!_0xed370c) {
+      _0xed370c = document.createElement('div');
+      _0xed370c.id = 'extractedBox';
+      document.body.appendChild(_0xed370c);
+      _0xed370c.style.position = "fixed";
+      _0xed370c.style.top = "10px";
+      _0xed370c.style.left = "35%";
+      _0xed370c.style.backgroundColor = "transparent";
+      _0xed370c.style.color = "#008080";
+      _0xed370c.style.padding = "10px";
+      _0xed370c.style.zIndex = "1000";
+      _0xed370c.style.fontFamily = "Arial, sans-serif";
+      _0xed370c.style.fontWeight = 'bold';
+      _0xed370c.style.fontSize = "18px";
+    }
+    var _0x2b8a5f = localStorage.getItem("lastExtractedTime");
+    var _0x59016f = calculateTimeDifference(_0x2b8a5f);
+    _0xed370c.innerHTML = "\n        <span style=\"color: orange;\">" + _0x44f18e + "</span> - \n        <span style=\"color: orange;\">" + _0x144dc2 + "</span> - \n        <span style=\"font-size: 14px; color: orange;\">(" + _0x59016f + ")</span>\n    ";
+  }
+  function calculateTimeDifference(_0x4a3e1e) {
+    if (!_0x4a3e1e) {
+      return "just now";
+    }
+    var _0x5554e6 = new Date();
+    var _0x30197a = new Date(_0x4a3e1e);
+    var _0x2db8c0 = Math.floor((_0x5554e6 - _0x30197a) / 0x3e8);
+    if (_0x2db8c0 < 0x3c) {
+      return "a few seconds ago";
+    }
+    var _0x30d786 = Math.floor(_0x2db8c0 / 0x3c);
+    if (_0x30d786 < 0x3c) {
+      return _0x30d786 === 0x1 ? "a minute ago" : _0x30d786 + " minutes ago";
+    }
+    var _0x2c068f = Math.floor(_0x30d786 / 0x3c);
+    if (_0x2c068f < 0x18) {
+      return _0x2c068f === 0x1 ? "an hour ago" : _0x2c068f + " hours ago";
+    }
+    var _0x3cc6b8 = Math.floor(_0x2c068f / 0x18);
+    if (_0x3cc6b8 < 0x7) {
+      return _0x3cc6b8 === 0x1 ? "a day ago" : _0x3cc6b8 + " days ago";
+    }
+    var _0x1eed35 = Math.floor(_0x3cc6b8 / 0x7);
+    if (_0x1eed35 < 0x4) {
+      return _0x1eed35 === 0x1 ? "a week ago" : _0x1eed35 + " weeks ago";
+    }
+    var _0x144ce0 = Math.floor(_0x3cc6b8 / 0x1e);
+    if (_0x144ce0 < 0xc) {
+      return _0x144ce0 === 0x1 ? "a month ago" : _0x144ce0 + " months ago";
+    }
+    var _0x36c0ed = Math.floor(_0x144ce0 / 0xc);
+    return _0x36c0ed === 0x1 ? "a year ago" : _0x36c0ed + " years ago";
+  }
+  window.onload = function () {
+    var _0x4b87a9 = localStorage.getItem("extractedPart");
+    var _0x3c440a = localStorage.getItem("workDoneInfo");
+    if (_0x4b87a9 && _0x3c440a) {
+      createOrUpdateBox(_0x4b87a9, _0x3c440a);
+    }
+  };
+  function ttv9() {
+    try {
+      var _0x1f21e1 = document.querySelector('.col-sm-5');
+      if (_0x1f21e1) {
+        var _0x55857f = _0x1f21e1.innerHTML;
+        localStorage.setItem("ttv9_felkona", _0x55857f);
+      }
+      var _0x141c53 = document.getElementById("infoDiv");
+      if (!_0x141c53) {
+        _0x141c53 = document.createElement('div');
+        _0x141c53.id = "infoDiv";
+        document.body.appendChild(_0x141c53);
+      }
+      updateWorkDoneInfo();
+    } catch (_0x598c8e) {
+      console.error("Error processing the work done information:", _0x598c8e.message);
+    }
+  }
+  function updateWorkDoneInfo() {
+    var _0xb48add = document.getElementById("infoDiv");
+    var _0x739db6 = localStorage.getItem('ttv9_felkona');
+    if (_0xb48add && _0x739db6) {
+      _0xb48add.innerHTML = _0x739db6;
+    }
+  }
+  (function () {
+    'use strict';
+  
+    function _0x2bdddd() {
+      chrome.runtime.sendMessage({
+        'action': 'showNotification',
+        'message': "You have accepted the task."
+      });
+    }
+    function _0x3a1bdd() {
+      const _0x1185c6 = /^https:\/\/taskv2\.microworkers\.com\/dotask\/info\/.*/;
+      return _0x1185c6.test(window.location.href);
+    }
+    window.addEventListener('load', function () {
+      if (_0x3a1bdd()) {
+        _0x2bdddd();
+      }
+    });
+  })();
+  var watermarkDiv = document.createElement("div");
+  watermarkDiv.innerText = "Felkona Looper PRO V16.08.24\nDEVELOPED BY FOYSAL KHAN";
+  watermarkDiv.style.position = "fixed";
+  watermarkDiv.style.top = "10px";
+  watermarkDiv.style.right = "10px";
+  watermarkDiv.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  watermarkDiv.style.color = "white";
+  watermarkDiv.style.padding = "5px";
+  watermarkDiv.style.zIndex = "1000";
+  watermarkDiv.style.fontSize = "12px";
+  watermarkDiv.style.textAlign = "right";
+  watermarkDiv.style.borderRadius = "5px";
+  watermarkDiv.style.cursor = 'pointer';
+  document.body.appendChild(watermarkDiv);
+  watermarkDiv.addEventListener("click", function () {
+    window.open("https://www.facebook.com/profile.php?id=100064198294627", "_blank");
+  });
+  (function () {
+    'use strict';
+  
+    const _0x360555 = document.getElementsByTagName('h3');
+    for (let _0x2438e0 = 0x0; _0x2438e0 < _0x360555.length; _0x2438e0++) {
+      if (_0x360555[_0x2438e0].textContent.trim() === "TTVCampaign-E0028:Campaign unknown or not running") {
+        let _0x2d6b5e = localStorage.getItem('refreshCount');
+        if (!_0x2d6b5e) {
+          _0x2d6b5e = 0x0;
+        }
+        _0x2d6b5e++;
+        localStorage.setItem('refreshCount', _0x2d6b5e);
+        if (_0x2d6b5e >= 0x1) {
+          const _0x20950e = document.querySelectorAll('a');
+          for (let _0x5066a1 = 0x0; _0x5066a1 < _0x20950e.length; _0x5066a1++) {
+            if (_0x20950e[_0x5066a1].textContent.trim() === "Jobs") {
+              _0x20950e[_0x5066a1].addEventListener("click", function () {
+                localStorage.setItem("refreshCount", 0x0);
+              });
+              _0x20950e[_0x5066a1].click();
+              break;
+            }
+          }
+        }
+        break;
+      }
+    }
+  })();
+  const clearLocalStorageButton = document.createElement("button");
+  clearLocalStorageButton.innerText = "Refresh";
+  clearLocalStorageButton.style.backgroundColor = "red";
+  clearLocalStorageButton.style.color = "white";
+  clearLocalStorageButton.style.border = "none";
+  clearLocalStorageButton.style.borderRadius = "10px";
+  clearLocalStorageButton.style.cursor = "pointer";
+  clearLocalStorageButton.style.position = "fixed";
+  clearLocalStorageButton.style.top = "10px";
+  clearLocalStorageButton.style.right = '190px';
+  clearLocalStorageButton.style.zIndex = 0x3e8;
+  clearLocalStorageButton.style.padding = '5px';
+  clearLocalStorageButton.style.fontSize = "12px";
+  clearLocalStorageButton.addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+  });
+  document.body.appendChild(clearLocalStorageButton);
+  function ttv8() {
+    (function () {
+      'use strict';
+  
+      if (window.location.href !== "https://www.microworkers.com/withdraw.php") {
+        return;
+      }
+      function _0x566e14(_0x18f4b6, _0x34bc32) {
+        const _0x407190 = Date.UTC(_0x18f4b6.getFullYear(), _0x18f4b6.getMonth(), _0x18f4b6.getDate());
+        const _0x82c8b3 = Date.UTC(_0x34bc32.getFullYear(), _0x34bc32.getMonth(), _0x34bc32.getDate());
+        return Math.floor((_0x82c8b3 - _0x407190) / 86400000);
+      }
+      const _0x5c45f6 = new Date();
+      let _0x539238 = 0x0;
+      let _0x2f9c20 = 0x0;
+      const _0x5ad6d4 = document.querySelectorAll(".widthrawarea table tr");
+      _0x5ad6d4.forEach((_0x4e8f71, _0x2deb01) => {
+        if (_0x2deb01 === 0x0) {
+          return;
+        }
+        const _0x4f5bc2 = _0x4e8f71.querySelector('td:nth-child(1)').innerText.trim();
+        const _0x11d047 = _0x4e8f71.querySelector('td:nth-child(5)').innerText.trim();
+        const _0xff5e54 = new Date(_0x4f5bc2);
+        const _0x4b05ab = parseFloat(_0x11d047.replace('$', ''));
+        if (_0x566e14(_0xff5e54, _0x5c45f6) <= 0x1e) {
+          _0x539238++;
+          _0x2f9c20 += _0x4b05ab;
+        }
+      });
+      const _0x5a6f87 = document.createElement("div");
+      _0x5a6f87.style.backgroundColor = "white";
+      _0x5a6f87.style.color = "green";
+      _0x5a6f87.style.padding = "10px";
+      _0x5a6f87.style.border = "1px solid green";
+      _0x5a6f87.style.marginBottom = '20px';
+      _0x5a6f87.style.fontSize = "16px";
+      _0x5a6f87.innerHTML = "\n                    <p><strong>Felkona Last 1 Month's Transaction Summary</strong></p>\n                    <p>Total Transactions: " + _0x539238 + "</p>\n                    <p>Total Amount: $" + _0x2f9c20.toFixed(0x2) + "</p>\n                ";
+      const _0x3c1ec2 = document.querySelector('.maincontent');
+      _0x3c1ec2.insertBefore(_0x5a6f87, _0x3c1ec2.firstChild);
+    })();
+    (function () {
+      'use strict';
+  
+      function _0x24d57a(_0x1a4912) {
+        let _0x99b86a = new Date();
+        let _0x3070e4 = _0x1a4912.match(/(\d+)\s+secs\s+ago/);
+        let _0x4af914 = _0x1a4912.match(/(\d+)\s+mins\s+ago/);
+        let _0x29a724 = _0x1a4912.match(/(\d+)\s+hours\s+ago/);
+        if (_0x3070e4) {
+          let _0xe77065 = parseInt(_0x3070e4[0x1], 0xa);
+          return new Date(_0x99b86a.getTime() - _0xe77065 * 0x3e8);
+        } else {
+          if (_0x4af914) {
+            let _0x133d4f = parseInt(_0x4af914[0x1], 0xa);
+            return new Date(_0x99b86a.getTime() - _0x133d4f * 0xea60);
+          } else {
+            if (_0x29a724) {
+              let _0x4f1994 = parseInt(_0x29a724[0x1], 0xa);
+              return new Date(_0x99b86a.getTime() - _0x4f1994 * 0x36ee80);
+            } else {
+              if (_0x1a4912.includes("1 hour ago")) {
+                return new Date(_0x99b86a.getTime() - 3600000);
+              }
+            }
+          }
+        }
+        return null;
+      }
+      function _0x5c34fc(_0x143f1f) {
+        let _0x2eba46 = new Date();
+        let _0x42a2c0 = _0x2eba46.getTime() - 86400000;
+        let _0x41652e = 0x0;
+        let _0x560987 = 0x0;
+        let _0x3f7721 = 0x0;
+        let _0xbcc754 = 0x0;
+        let _0x1d6486 = 0x0;
+        _0x143f1f.forEach(_0x52fd23 => {
+          let _0x5e29f0 = _0x52fd23.querySelector(".hmworkerstatus p").textContent.trim();
+          let _0x187ba4 = _0x24d57a(_0x5e29f0);
+          if (_0x187ba4) {
+            let _0x29b70c = _0x52fd23.querySelector(".workerheaderearn p").textContent.trim();
+            let _0x276526 = parseFloat(_0x29b70c.replace('$', ''));
+            let _0xdb2e63 = _0x52fd23.querySelector(".hmworkerstatus svg.green") !== null;
+            if (_0xdb2e63) {
+              if (_0x187ba4.getTime() >= _0x42a2c0) {
+                _0x560987++;
+                _0xbcc754 += _0x276526;
+                if (Math.abs(_0x2eba46 - _0x187ba4) / 0xea60 <= 0x3c) {
+                  _0x41652e++;
+                  _0x3f7721 += _0x276526;
+                }
+              }
+            }
+            let _0x40b057 = _0x52fd23.querySelectorAll(".hmworkerstatus path");
+            _0x40b057.forEach(_0x5d2849 => {
+              if (_0x5d2849.getAttribute('d') === "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z") {
+                _0x1d6486++;
+              }
+            });
+          }
+        });
+        return {
+          'countLast60Minutes': _0x41652e,
+          'count24Hours': _0x560987,
+          'earningsLast60Minutes': _0x3f7721,
+          'earningsLast24Hours': _0xbcc754,
+          'pendingReviewCount': _0x1d6486
+        };
+      }
+      function _0x344755(_0x107a3f, _0x102068, _0x377b3f, _0x32c693, _0x424c7d) {
+        let _0x20f187 = document.createElement("div");
+        _0x20f187.style.padding = "10px";
+        _0x20f187.style.backgroundColor = 'white';
+        _0x20f187.style.color = "green";
+        _0x20f187.style.border = "1px solid green";
+        _0x20f187.style.marginBottom = '10px';
+        _0x20f187.style.fontSize = "16px";
+        _0x20f187.style.display = "flex";
+        _0x20f187.style.flexDirection = "row";
+        _0x20f187.style.justifyContent = "space-between";
+        let _0x165740 = document.createElement("div");
+        _0x165740.style.flex = '1';
+        _0x165740.innerHTML = "\n                        <strong>Felkona Last 1 hour</strong><br>\n                        Complete Task: " + _0x107a3f + "<br>\n                        Earnings: $" + _0x377b3f.toFixed(0x3) + "\n                    ";
+        let _0xc452d8 = document.createElement('div');
+        _0xc452d8.style.flex = '1';
+        _0xc452d8.style.marginLeft = '20px';
+        _0xc452d8.innerHTML = "\n                        <strong>Felkona Last 24 hours</strong><br>\n                        Complete Task: " + _0x102068 + "<br>\n                        Earnings: $" + _0x32c693.toFixed(0x3) + "\n                    ";
+        let _0x1773bf = document.createElement('div');
+        _0x1773bf.style.flex = '1';
+        _0x1773bf.style.marginLeft = "20px";
+        _0x1773bf.innerHTML = "\n                        <strong>Felkona Total Submitted</strong><br>\n                        Pending Review: " + _0x424c7d + "<br>\n                        Total Submitted: " + (_0x107a3f + _0x424c7d) + "\n                    ";
+        _0x20f187.appendChild(_0x165740);
+        _0x20f187.appendChild(_0xc452d8);
+        _0x20f187.appendChild(_0x1773bf);
+        let _0xb2188e = document.querySelector('.hmworkerinfo');
+        if (_0xb2188e) {
+          _0xb2188e.insertBefore(_0x20f187, _0xb2188e.firstChild);
+        }
+      }
+      function _0xc20e56() {
+        if (window.location.href !== "https://www.microworkers.com/hm_worker.php") {
+          console.log("This script is intended for https://www.microworkers.com/hm_worker.php only.");
+          return;
+        }
+        let _0x534997 = Array.from(document.querySelectorAll('.hmworkerlist'));
+        if (_0x534997.length === 0x0) {
+          console.error("No .hmworkerlist elements found on the page.");
+          return;
+        }
+        let {
+          countLast60Minutes: _0x1099a1,
+          count24Hours: _0x152ec9,
+          earningsLast60Minutes: _0x79b2f,
+          earningsLast24Hours: _0x13defb,
+          pendingReviewCount: _0x1855ae
+        } = _0x5c34fc(_0x534997);
+        _0x344755(_0x1099a1, _0x152ec9, _0x79b2f, _0x13defb, _0x1855ae);
+      }
+      setTimeout(_0xc20e56, 0x1f4);
+    })();
+  }
+  (function () {
+    'use strict';
+  
+    const _0x381681 = document.createElement("button");
+    _0x381681.innerText = "Task Review";
+    _0x381681.style.position = "fixed";
+    _0x381681.style.top = '10px';
+    _0x381681.style.right = "250px";
+    _0x381681.style.padding = '4px';
+    _0x381681.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    _0x381681.style.color = "#fff";
+    _0x381681.style.border = "3px solid";
+    _0x381681.style.borderRadius = "15px";
+    _0x381681.style.fontSize = "12px";
+    _0x381681.style.cursor = "pointer";
+    _0x381681.style.borderImage = "linear-gradient(270deg, #ff6ec4, #7873f5, #26d0ce) 1";
+    _0x381681.style.borderImageSlice = '1';
+    _0x381681.style.animation = "borderAnimation 5s linear infinite";
+    document.body.appendChild(_0x381681);
+    _0x381681.addEventListener("click", function () {
+      window.open("https://www.microworkers.com/hm_worker.php", '_blank');
+    });
+    const _0x4ff026 = document.createElement("style");
+    _0x4ff026.innerHTML = "\n                    @keyframes borderAnimation {\n                        0% {\n                            border-image-source: linear-gradient(270deg, #ff6ec4, #7873f5, #26d0ce);\n                        }\n                        50% {\n                            border-image-source: linear-gradient(90deg, #ff6ec4, #7873f5, #26d0ce);\n                        }\n                        100% {\n                            border-image-source: linear-gradient(270deg, #ff6ec4, #7873f5, #26d0ce);\n                        }\n                    }\n                ";
+    document.head.appendChild(_0x4ff026);
+  })();
